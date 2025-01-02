@@ -49,3 +49,7 @@ body{
     text-transform: uppercase;
 }
 /* END FORM REGISTER */
+
+.nolist{
+    list-style-type: none;
+}

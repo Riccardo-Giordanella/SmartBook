@@ -11,10 +11,11 @@
                 </li>
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prenota un appuntamento</a>
+                    <a class="nav-link" href="{{route('prenota')}}">Prenota un appuntamento</a>
                 </li>
                 @endauth
             </ul>
+            @guest
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('register')}}">Registrati</a>
@@ -23,6 +24,17 @@
                     <a class="nav-link" href="{{route('login')}}">Login</a>
                 </li>
             </ul>
+            @else
+            <div class="btn-group dropstart">
+                <a type="button" class="dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{Auth::user()->name}}
+                </a>
+                <ul class="dropdown-menu">
+                    <li><form method="POST" action="{{ route('logout') }}"> @csrf <button type="submit" class="dropdown-item text-danger">Logout</button> </form></li>
+                </ul>
+              </div>
+            
+            @endguest
         </div>
     </div>
 </nav>
