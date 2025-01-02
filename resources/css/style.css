@@ -1,0 +1,9 @@
+.background{
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.mask{
+    background-color: rgba(0, 0, 0, 0.6);
+}
