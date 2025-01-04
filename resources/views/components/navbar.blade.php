@@ -26,7 +26,7 @@
             </ul>
             @else
             <div class="btn-group dropstart">
-                <a type="button" class="dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                <a type="button" class="dropdown-toggle text-white nolist" data-bs-toggle="dropdown" aria-expanded="false">
                   {{Auth::user()->name}}
                 </a>
                 <ul class="dropdown-menu">

@@ -7,4 +7,4 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 // Route Appuntamento
 
-Route::get('/prenota', [PublicController::class, 'prenota'])->name('prenota');
+Route::get('/prenota', [PublicController::class, 'prenota'])->middleware('auth')->name('prenota');

@@ -52,4 +52,6 @@ body{
 
 .nolist{
     list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
 }
