@@ -1,4 +1,9 @@
 <x-layout>
+    @if(session()->has('errorMessage'))
+    <div class="alert alert-danger text-center shadow rounded">
+        {{session('errorMessage')}}
+    </div>
+    @endif
     <header class="container-fluid">
         <div class="row">
             <!-- Hero -->

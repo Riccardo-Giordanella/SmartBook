@@ -30,7 +30,10 @@
                   {{Auth::user()->name}}
                 </a>
                 <ul class="dropdown-menu">
-                    <li><form method="POST" action="{{ route('logout') }}"> @csrf <button type="submit" class="dropdown-item text-danger">Logout</button> </form></li>
+                    <li class="text-center">
+                        <a type="button" href="{{route('revisor.index')}}" class="text-white nolist text-center">Zona Revisore</a>
+                    </li>
+                    <li class="text-center"><form method="POST" action="{{ route('logout') }}"> @csrf <button type="submit" class="dropdown-item text-danger">Logout</button> </form></li>
                 </ul>
               </div>
             
