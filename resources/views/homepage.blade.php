@@ -4,6 +4,11 @@
         {{session('errorMessage')}}
     </div>
     @endif
+    @if (session('successMessage'))
+    <div class="alert alert-success">
+        {{ session('successMessage') }}
+    </div>
+    @endif
     <header class="container-fluid">
         <div class="row">
             <!-- Hero -->

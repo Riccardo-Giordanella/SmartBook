@@ -12,7 +12,7 @@
     <!-- Hero -->
     {{-- Calendario --}}
     <section>
-        
+        <x-prenota />
     </section>
     {{-- End Calendario --}}
 </x-layout>

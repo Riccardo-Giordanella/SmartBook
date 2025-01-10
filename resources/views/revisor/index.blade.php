@@ -1,4 +1,5 @@
 <x-layout>
+    <x-modal />
     @if (session()->has('message'))
     <div class="row justify-content-center">
         <div class="col-5 alert alert-success text-center shadow rounded">
@@ -28,21 +29,23 @@
             </div>
         </div>
         <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
-            <div>
-                <p>{{ $appointments_to_check->day . $appointments_to_check->month . $appointments_to_check->year . $appointments_to_check->hour . $appointments_to_check->minute }}</p>
-                <h3>Assistito: {{ $appointments_to_check->user->fiscalcode . $appointments_to_check->user->name }}</h3>
-            </div>
-            <div class="d-flex pb-4 justify-content-around">
-                <form action="{{ route('reject', ['appointment' => $appointmets_to_check]) }}" method="POST"> 
-                    @csrf 
-                    @method('PATCH') 
-                    <button class="btn btn-danger py-2 px-5 fw-bold ">Rifiuta</button> 
-                </form> 
-                <form action="{{ route('accept', ['appointment' => $appointments_to_check]) }}" method="POST"> 
-                    @csrf
-                    @method('PATCH')
-                    <button class="btn btn-success py-2 px-5 fw-bold ">Accetta</button>
-                </form>
+            <div class="bg-dark text-white my-4 rounded shadow d-flex justify-content-center flex-column align-items-center">
+                <p>Giorno: {{ $appointments_to_check->day}} / {{$appointments_to_check->month}} /       {{$appointments_to_check->year}}</p>
+                <p>Orario: {{$appointments_to_check->hour}} : {{$appointments_to_check->minute }}</p>
+                <p>Assistito: {{ $appointments_to_check->user->name}}</p>
+                <p>Codice Fiscale: <span class="text-uppercase">{{$appointments_to_check->user->fiscalcode }}</span></p>
+                <div class="d-flex pb-4 justify-content-around">
+                    <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3"> 
+                        @csrf 
+                        @method('PATCH') 
+                        <button class="btn btn-danger py-2 px-5 fw-bold ">Rifiuta</button> 
+                    </form> 
+                    <form action="{{ route('accept', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3"> 
+                        @csrf
+                        @method('PATCH')
+                        <button class="btn btn-success py-2 px-5 fw-bold ">Accetta</button>
+                    </form>
+                </div>
             </div>
         </div>
         @else

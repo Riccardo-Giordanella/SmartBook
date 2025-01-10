@@ -26,7 +26,7 @@ class Appointment extends Model
 
     public function setAccepted($value)
     {
-        $this->set_accepted = $value;
+        $this->is_accepted = $value;
         $this->save();
         return true;
     }
