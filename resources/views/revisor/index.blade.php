@@ -35,15 +35,17 @@
                 <p>Assistito: {{ $appointments_to_check->user->name}}</p>
                 <p>Codice Fiscale: <span class="text-uppercase">{{$appointments_to_check->user->fiscalcode }}</span></p>
                 <div class="d-flex pb-4 justify-content-around">
-                    <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3"> 
-                        @csrf 
-                        @method('PATCH') 
-                        <button class="btn btn-danger py-2 px-5 fw-bold ">Rifiuta</button> 
-                    </form> 
+                    <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3">
+                        @csrf
+                        @method('PATCH')
+                        <button type="button" class="btn btn-danger py-2 px-5 fw-bold" <button type="button" class="btn btn-danger py-2 px-5 fw-bold" data-bs-toggle="modal" data-bs-target="#confirmRejectModal">
+                            Rifiuta
+                        </button>
+                    </form>                    
                     <form action="{{ route('accept', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3"> 
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success py-2 px-5 fw-bold ">Accetta</button>
+                        <button class="btn btn-success py-2 px-5 fw-bold" type="submit">Accetta</button>
                     </form>
                 </div>
             </div>
