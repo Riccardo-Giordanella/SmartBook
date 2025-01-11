@@ -53,11 +53,11 @@
                     </div> 
                     <div class="modal-body"> Sei sicuro di voler rifiutare questo appuntamento? Questa azione non è reversibile. </div> 
                     <div class="modal-footer"> 
-                        <button type="button" class="btn btn-secondary" data-bs-target="modal">Annulla</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
                         <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger py-2 px-5 fw-bold">
+                            <button type="submit" class="btn btn-danger py-2 px-5 fw-bold" data-bs-dismiss="modal">
                                 Rifiuta
                             </button>
                         </form>  
