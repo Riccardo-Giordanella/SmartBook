@@ -27,19 +27,44 @@
             @else
             <div class="btn-group dropstart">
                 <a type="button" class="dropdown-toggle text-white nolist" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{Auth::user()->name}}
+                    {{Auth::user()->name}}
                 </a>
                 <ul class="dropdown-menu">
                     @if (Auth::user()->is_revisor)
                     <li class="text-center">
-                        <a type="button" href="{{route('revisor.index')}}" class="text-white nolist text-center">Zona Revisore</a>
+                        <a type="button" href="{{route('revisor.index')}}" class="text-white nolist">Zona Revisore</a>
                     </li>
                     @endif
-                    <li class="text-center"><form method="POST" action="{{ route('logout') }}"> @csrf <button type="submit" class="dropdown-item text-danger">Logout</button> </form></li>
+                    <li class="text-center my-3">
+                        <a type="button" class="text-white nolist" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            Informazioni
+                        </a>
+                    </li>
+                    <li class="text-center">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf 
+                            <button type="submit" class="dropdown-item text-danger">Logout</button>
+                        </form>
+                    </li>
                 </ul>
-              </div>
-            
+            </div>
             @endguest
         </div>
     </div>
 </nav>
+
+@if (Auth::user())
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Informazioni Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <section>
+            <p>Codice fiscale: <span class="text-uppercase">{{Auth::user()->fiscalcode}}</span></p>
+            <p>Email: {{Auth::user()->email}}</p>
+            <p>Nome: {{Auth::user()->name}}</p>
+        </section>
+    </div>
+</div>
+@endif
