@@ -1,5 +1,4 @@
 <x-layout>
-    <x-modal />
     @if (session()->has('message'))
     <div class="row justify-content-center">
         <div class="col-5 alert alert-success text-center shadow rounded">
@@ -35,13 +34,7 @@
                 <p>Assistito: {{ $appointments_to_check->user->name}}</p>
                 <p>Codice Fiscale: <span class="text-uppercase">{{$appointments_to_check->user->fiscalcode }}</span></p>
                 <div class="d-flex pb-4 justify-content-around">
-                    <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3">
-                        @csrf
-                        @method('PATCH')
-                        <button type="button" class="btn btn-danger py-2 px-5 fw-bold" <button type="button" class="btn btn-danger py-2 px-5 fw-bold" data-bs-toggle="modal" data-bs-target="#confirmRejectModal">
-                            Rifiuta
-                        </button>
-                    </form>                    
+                    <button type="button" class="btn btn-danger" id="confirmRejectButton" data-bs-toggle="modal" data-bs-target="#confirmRejectModal">Rifiuta</button>                   
                     <form action="{{ route('accept', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3"> 
                         @csrf
                         @method('PATCH')
@@ -49,6 +42,28 @@
                     </form>
                 </div>
             </div>
+        </div>
+        
+        <!-- Modale di conferma --> 
+        <div class="modal fade" id="confirmRejectModal" tabindex="-1" role="dialog" aria-labelledby="confirmRejectModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <h5 class="modal-title" id="confirmRejectModalLabel">Sei sicuro?</h5> 
+                    </div> 
+                    <div class="modal-body"> Sei sicuro di voler rifiutare questo appuntamento? Questa azione non è reversibile. </div> 
+                    <div class="modal-footer"> 
+                        <button type="button" class="btn btn-secondary" data-bs-target="modal">Annulla</button>
+                        <form action="{{ route('reject', ['appointment' => $appointments_to_check]) }}" method="POST" class="mx-3">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger py-2 px-5 fw-bold">
+                                Rifiuta
+                            </button>
+                        </form>  
+                    </div> 
+                </div>
+            </div> 
         </div>
         @else
         <div class="row justify-content-center align-items-center height-custom text-center">
