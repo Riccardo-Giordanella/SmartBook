@@ -53,7 +53,7 @@
     </div>
 </nav>
 
-@if (Auth::user())
+@auth
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Informazioni Account</h5>
@@ -61,10 +61,28 @@
     </div>
     <div class="offcanvas-body">
         <section>
-            <p>Codice fiscale: <span class="text-uppercase">{{Auth::user()->fiscalcode}}</span></p>
-            <p>Email: {{Auth::user()->email}}</p>
-            <p>Nome: {{Auth::user()->name}}</p>
+            <p>Codice fiscale: <span class="text-uppercase">{{ Auth::user()->fiscalcode }}</span></p>
+            <p>Email: {{ Auth::user()->email }}</p>
+            <p>Nome: {{ Auth::user()->name }}</p>
+        </section>
+        <section class="mt-5 d-flex justify-content-center align-items-center flex-column">
+            @if ($appointments->isEmpty())
+            <p class="mt-5 text-danger fw-bold">Non hai appuntamenti confermati.</p>
+            @else
+            <p class="mt-5 fw-bold text-center">I tuoi appuntamenti attivi</p>
+                @foreach ($appointments as $appointment)
+                <div class="card bg-success my-2" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{$appointment->service}}</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">{{$appointment->type}}</h6>
+                      <p class="card-text">Data e ora: {{$appointment->day}}/{{$appointment->month}}/{{$appointment->year}}  {{$appointment->hour}}:@if ($appointment->minute == 0){{$appointment->minute}}0 @else{{$appointment->minute}}
+                        @endif
+                      </p>
+                    </div>
+                  </div>
+                @endforeach
+            @endif
         </section>
     </div>
 </div>
-@endif
+@endauth

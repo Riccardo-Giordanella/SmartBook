@@ -27,7 +27,7 @@ class User extends Authenticatable
 
     public function appointments()
     {
-        return $this->belongsToMany(Appointment::class);
+        return $this->hasMany(Appointment::class);
     }
     /**
      * The attributes that should be hidden for serialization.
