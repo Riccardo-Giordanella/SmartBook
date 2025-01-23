@@ -112,7 +112,25 @@ populateDays();
 
 // javascript per la modale
 const confirmRejectButton = document.querySelector('#confirmRejectButton');
-    confirmRejectButton.addEventListener('click', function() { 
-        const rejectForm = document.querySelector('#rejectForm');
-        rejectForm.submit(); 
-    });
+confirmRejectButton.addEventListener('click', function() { 
+    const rejectForm = document.querySelector('#rejectForm');
+    rejectForm.submit(); 
+});
+
+// Logica responsive dropdown
+
+function adjustDropdown() {
+
+    let dropdown = document.querySelector('#dropdown');
+    
+    if (window.innerWidth < 768) {
+        dropdown.classList.remove('dropstart');
+        dropdown.classList.add('dropend');
+    } else {
+        dropdown.classList.remove('dropend');
+        dropdown.classList.add('dropstart');
+    }
+}
+
+// window.addEventListener('resize', adjustDropdown);
+// adjustDropdown();
