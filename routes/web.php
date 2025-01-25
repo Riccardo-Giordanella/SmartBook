@@ -17,3 +17,4 @@ Route::post('/prenota/invia', [AppointmentController::class, 'store'])->name('ap
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{appointment}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{appointment}', [RevisorController::class, 'reject'])->name('reject');
+Route::patch('/cancel/{appointment}', [RevisorController::class, 'cancel'])->name('cancel');
