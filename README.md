@@ -1,4 +1,3 @@
-```markdown
 # SmartBook
 
 <img src="https://icons.iconarchive.com/icons/aha-soft/large-calendar/48/Calendar-icon.png"></img>
@@ -52,4 +51,4 @@ If you wish to contribute to the project, feel free to submit a pull request or 
 [Riccardo Giordanella] - <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a>
 
 ## Attention message
-<div style="border: 2px solid red; padding: 10px; background-color: #ffe6e6; color: #cc0000; font-weight: bold;"> Attention: This project was created by [Your Name]. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </div>
+<p style="border: 2px solid red; padding: 10px; background-color: #ffe6e6; color: #cc0000; font-weight: bold;"> Attention: This project was created by Riccardo Giordanella. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </p>
