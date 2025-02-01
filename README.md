@@ -1,25 +1,55 @@
+```markdown
 # SmartBook
 
 <img src="https://icons.iconarchive.com/icons/aha-soft/large-calendar/48/Calendar-icon.png"></img>
 
-## Descrizione
-**SmartBook** è un applicativo web sviluppato con Laravel che permette di prenotare un appuntamento per qualunque tipo di ufficio e per ogni esigenza. Il progetto è pensato per semplificare la gestione delle prenotazioni, migliorare l'efficienza e offrire un'esperienza utente intuitiva.
+## Description
+**SmartBook** is a web application developed with Laravel that allows users to book appointments for any type of office and for any need. The project is designed to simplify the management of bookings, improve efficiency, and offer an intuitive user experience.
 
-## Funzionalità Principali
-- **Prenotazione Facile**: Consente agli utenti di prenotare appuntamenti in pochi semplici passaggi.
-- **Gestione Appuntamenti**: Gli amministratori possono gestire facilmente gli appuntamenti, vedere le disponibilità e aggiornare gli orari.
-- **Notifiche**: Invia notifiche agli utenti per ricordare gli appuntamenti.
-- **Dashboard Utente**: Un'interfaccia intuitiva per visualizzare e gestire gli appuntamenti.
+## Key Features
+- **Easy Booking**: Allows users to book appointments in just a few simple steps.
+- **Appointment Management**: Administrators can easily manage appointments, view availabilities, and update schedules.
+- **User/Admin Dashboard**: An intuitive interface to view and manage appointments.
 
-## Tecnologie Utilizzate
-- **Laravel**: Framework PHP per il backend.
-- **MySQL**: Database utilizzato per la memorizzazione dei dati.
-- **HTML5 & CSS3**: Per la struttura e lo stile dell'applicativo.
-- **JavaScript (Vue.js)**: Per le funzionalità dinamiche del frontend.
+## Technologies Used
+- **Laravel**: PHP framework for the backend.
+- **MySQL**: Database used for data storage.
+- **HTML5 & CSS3**: For the structure and style of the application.
+- **JavaScript (Vue.js)**: For dynamic frontend functionalities.
+- **Carbon**: Library for handling dates and times.
+- **Fortify**: Laravel library for authentication.
 
-## Installazione
-Per installare il progetto localmente, segui questi passaggi:
+## Installation
+To install the project locally, follow these steps:
 
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/tuo-username/smartbook.git
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Riccardo-Giordanella/Calendar.git
+
+2. Install dependencies:
+    ```bash
+    cd smartbook
+    composer install
+    npm install
+
+3. Configure the .env file:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+
+4. Run the database migration:
+    ```bash
+    php artisan migrate
+
+5. Start the local server:
+    ```bash
+    php artisan serve
+
+## Contributions
+If you wish to contribute to the project, feel free to submit a pull request or open an issue on the GitHub repository.
+
+## Author
+[Riccardo Giordanella] - <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a>
+
+## Attention message
+<div style="border: 2px solid red; padding: 10px; background-color: #ffe6e6; color: #cc0000; font-weight: bold;"> Attention: This project was created by [Your Name]. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </div>
