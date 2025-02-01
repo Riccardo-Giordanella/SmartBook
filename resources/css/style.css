@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: grey;
+    background-color: rgb(193, 183, 183);
     
 }
 
@@ -21,6 +21,11 @@ body{
 
 /* FORM REGISTER */
 .form{
+    background-color: #424242;
+    height: 400px;
+}
+
+.form-reg{
     background-color: #424242;
 }
 
@@ -54,4 +59,14 @@ body{
     list-style-type: none;
     text-decoration: none;
     cursor: pointer;
+}
+
+.nav-link-fix{
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-link-fix:hover{
+    transform: scale(1.02);
+    text-shadow: 1px 1px 2px rgb(199, 195, 195), -1px -1px 2px rgb(199, 195, 195);
 }

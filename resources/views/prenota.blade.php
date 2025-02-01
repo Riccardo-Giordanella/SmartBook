@@ -11,7 +11,10 @@
     </header>
     <!-- Hero -->
     {{-- Calendario --}}
-    <section>
+    <section class="mt-3">
+        <div class="bg-white container rounded-5">
+        <h3 class="text-center">Stai prenotando l'appuntamento per il codice fiscale: <span class="text-uppercase fw-bold">{{Auth::user()->fiscalcode}}</span></h3>
+        </div>
         <x-prenota />
     </section>
     {{-- End Calendario --}}

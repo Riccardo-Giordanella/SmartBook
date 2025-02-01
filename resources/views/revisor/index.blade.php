@@ -1,6 +1,6 @@
 <x-layout>
     @if (session()->has('message'))
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-4 alert alert-success text-center shadow rounded">
                 {{ session('message') }}
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-
+        
         @if ($appointments_to_check)
         <div class="row justify-content-center pt-5">
             <div class="col-md-8">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Modale di rifiuto per l'appuntamento da controllare --> 
         <div class="modal fade" id="confirmRejectModal-{{ $appointments_to_check->id }}" tabindex="-1" role="dialog" aria-labelledby="confirmRejectModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document"> 
@@ -54,7 +54,7 @@
                     <div class="modal-header"> 
                         <h5 class="modal-title" id="confirmRejectModalLabel">Sei sicuro?</h5> 
                     </div> 
-                    <div class="modal-body"> Sei sicuro di voler rifiutare questo appuntamento? Questa azione non è reversibile. </div> 
+                    <div class="modal-body">Sei sicuro di voler rifiutare questo appuntamento? Questa azione non è reversibile.</div> 
                     <div class="modal-footer"> 
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
                         <form action="{{ route('reject', ['appointment' => $appointments_to_check->id]) }}" method="POST" class="mx-3">
@@ -67,7 +67,7 @@
             </div> 
         </div>
         @endif
-
+        
         @if($appointments_accepted->isNotEmpty())
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-4">
@@ -106,7 +106,7 @@
             </div>
         </div>
         @endif
-
+        
         @if (!$appointments_to_check && $appointments_accepted->isEmpty())
         <div class="row justify-content-center align-items-center height-custom text-center">
             <div class="col-12"> 
