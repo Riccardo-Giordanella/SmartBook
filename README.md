@@ -1,4 +1,3 @@
-```markdown
 # SmartBook
 
 <img src="https://icons.iconarchive.com/icons/aha-soft/large-calendar/48/Calendar-icon.png"></img>
