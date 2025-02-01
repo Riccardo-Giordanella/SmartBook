@@ -50,5 +50,5 @@ If you wish to contribute to the project, feel free to submit a pull request or 
 ## Author
 [Riccardo Giordanella] - <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a>
 
-## Attention message
-<p style="border: 2px solid red; padding: 10px; background-color: #ffe6e6; color: #cc0000; font-weight: bold;"> Attention: This project was created by Riccardo Giordanella. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </p>
+## Attention message 🚨
+<p>⚠️ Attention: This project was created by Riccardo Giordanella. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </p>
