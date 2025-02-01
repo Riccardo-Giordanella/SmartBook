@@ -1,6 +1,4 @@
-# SmartBook
-
-<img src="https://icons.iconarchive.com/icons/aha-soft/large-calendar/48/Calendar-icon.png"></img>
+# SmartBook <img src="https://icons.iconarchive.com/icons/aha-soft/large-calendar/48/Calendar-icon.png"></img>
 
 ## Description
 **SmartBook** is a web application developed with Laravel that allows users to book appointments for any type of office and for any need. The project is designed to simplify the management of bookings, improve efficiency, and offer an intuitive user experience.
@@ -48,7 +46,7 @@ To install the project locally, follow these steps:
 If you wish to contribute to the project, feel free to submit a pull request or open an issue on the GitHub repository.
 
 ## Author
-[Riccardo Giordanella] - <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a>
+[Riccardo Giordanella] - <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a> <img src="https://image.flaticon.com/icons/png/512/174/174857.png" width="20" height="20" />
 
 ## Attention message 🚨
 <p>⚠️ Attention: This project was created by Riccardo Giordanella. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </p>
