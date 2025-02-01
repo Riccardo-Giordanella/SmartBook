@@ -46,6 +46,6 @@ To install the project locally, follow these steps:
 If you wish to contribute to the project, feel free to submit a pull request or open an issue on the GitHub repository.
 
 ## Author
-[Riccardo Giordanella] - <img src="https://icons.iconarchive.com/icons/graphics-vibe/simple-rounded-social/16/linkedin-icon.png" width="16" height="16" /> <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/">Linkedin Profile</a> 
+[Riccardo Giordanella] - <img src="https://icons.iconarchive.com/icons/graphics-vibe/simple-rounded-social/16/linkedin-icon.png" width="16" height="16" /> <a href="https://www.linkedin.com/in/riccardo-giordanella-173195197/" target="blank">Linkedin Profile</a> 
 ## Attention message 🚨
 <p>⚠️ Attention: This project was created by Riccardo Giordanella. Please do not claim it as someone else's work and keep my name in the footer of the application. Thank you for respecting my work. </p>
