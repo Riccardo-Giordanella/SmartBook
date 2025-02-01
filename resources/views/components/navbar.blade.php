@@ -80,6 +80,7 @@
             @else 
             <p class="mt-5 fw-bold text-center">I tuoi appuntamenti attivi</p> 
             @foreach ($appointments as $appointment) 
+            @if ($appointment->is_accepted)
             <div class="card bg-success my-2" style="width: 18rem;"> 
                 <div class="card-body"> 
                     <h5 class="card-title">{{$appointment->service}}</h5> 
@@ -87,6 +88,7 @@
                     <p class="card-text">Data e ora: {{$appointment->day}}/{{$appointment->month}}/{{$appointment->year}} {{$appointment->hour}}:@if ($appointment->minute == 0){{$appointment->minute}}0 @else{{$appointment->minute}} @endif </p> 
                 </div> 
             </div> 
+            @endif
             @endforeach 
             @endif 
         </section> 

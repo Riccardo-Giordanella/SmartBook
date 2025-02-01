@@ -33,7 +33,7 @@
         <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
             <div class="bg-dark text-white my-4 rounded shadow d-flex justify-content-center flex-column align-items-center">
                 <p>Giorno: {{ $appointments_to_check->day }} / {{ $appointments_to_check->month }} / {{ $appointments_to_check->year }}</p>
-                <p>Orario: {{ $appointments_to_check->hour }} : {{ $appointments_to_check->minute }}</p>
+                <p>Orario: @if ($appointments_to_check->hour == 9) 0{{ $appointments_to_check->hour }} @else{{ $appointments_to_check->hour }}@endif : @if($appointments_to_check->minute == 0)0{{ $appointments_to_check->minute }}@else {{ $appointments_to_check->minute }}@endif</p>
                 <p>Assistito: {{ $appointments_to_check->user->name }}</p>
                 <p>Codice Fiscale: <span class="text-uppercase">{{ $appointments_to_check->user->fiscalcode }}</span></p>
                 <div class="d-flex pb-4 justify-content-around">
@@ -77,7 +77,7 @@
                 @foreach($appointments_accepted as $appointment)
                 <div class="bg-dark text-white my-4 rounded shadow text-center py-1">
                     <p>Giorno: {{ $appointment->day }} / {{ $appointment->month }} / {{ $appointment->year }}</p>
-                    <p>Orario: {{ $appointment->hour }} : {{ $appointment->minute }}</p>
+                    <p>Orario: @if ($appointment->hour == 9)0{{ $appointment->hour }} @else{{ $appointment->hour }}@endif : @if ($appointment->minute == 0)0{{ $appointment->minute }}@else{{ $appointment->minute }}@endif</p>
                     <p>Assistito: {{ $appointment->user->name }}</p>
                     <p>Codice Fiscale: <span class="text-uppercase">{{ $appointment->user->fiscalcode }}</span></p>
                     <button type="button" class="btn btn-danger" id="confirmRejectButton2" data-bs-toggle="modal" data-bs-target="#confirmRejectModal2-{{ $appointment->id }}">Annulla</button>
