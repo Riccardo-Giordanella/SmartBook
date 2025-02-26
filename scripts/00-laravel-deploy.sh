@@ -14,3 +14,4 @@ php artisan migrate
 echo "Running build..."
 npm install
 npm run build
+npm run dev
