@@ -1,10 +1,13 @@
 <div class="container">
     <div class="row justify-content-center align-items-center my-5">
         <div class="col-6">
-            <form class="bg-dark text-white d-flex flex-column align-items-center justify-content-center rounded shadow p-4" method="POST" action="{{route('appointment.store')}}">
+            <form
+                class="bg-dark text-white d-flex flex-column align-items-center justify-content-center rounded shadow p-4"
+                method="POST" action="{{ route('appointment.store') }}">
                 @csrf
                 <div class="mb-3">
-                    <p>Oggi è: {{\Carbon\Carbon::now()->locale('it')->isoFormat('LL')}} {{\Carbon\Carbon::now('Europe/Rome')->locale('it')->isoFormat('HH:mm')}}</p>
+                    <p>Oggi è: {{ \Carbon\Carbon::now()->locale('it')->isoFormat('LL') }}
+                        {{ \Carbon\Carbon::now('Europe/Rome')->locale('it')->isoFormat('HH:mm') }}</p>
                 </div>
                 <p>Seleziona il tipo di servizio</p>
                 <div class="mb-3">
@@ -66,4 +69,3 @@
         </div>
     </div>
 </div>
-

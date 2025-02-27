@@ -12,4 +12,5 @@ echo "Running migrations..."
 php artisan migrate
 
 echo "Running build..."
-npm start
+npm install
+npm run build
